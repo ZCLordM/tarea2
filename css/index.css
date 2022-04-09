@@ -137,6 +137,9 @@ input#menu {
         font-size: 2.5rem;
     }
 }
+#submenu img{
+    text-align: center;
+}
 /*slider*/
 .box{
     width: 100%;
@@ -182,7 +185,7 @@ input#menu {
     margin-left: 10%;
 }
 .img1{
-    background-image:url(../img/batman.jpg);
+    background-image:url(/img/batman.jpg);
     display: none;
     background-position-y: 40%;
 }
@@ -287,9 +290,12 @@ cuerpo
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-.img img{
+.img .img-films{
     width: 100%;
     transition: all 500ms ease-out;
+}
+.img .imagen-curso {
+    width: 100px  !important;
 }
 .texto{
     position: absolute;

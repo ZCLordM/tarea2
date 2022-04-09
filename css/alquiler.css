@@ -1,257 +1,18 @@
-*{
-    font-family: 'Raleway',sans-serif;
+body {
+    background-color: #0F1111;
+}
+* {
+    font-family: 'Raleway', sans-serif;
     margin: 0px;
     padding: 0px;
     color: #fff;
 }
-header {
-    position: fixed;
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    margin-top: 1rem;
-    border-bottom: 1px solid #dedfe3;
-    z-index: 3;
-}
-body {
-    background-color: #0F1111;
-}
-/*globales*/
-h1{
+h1 {
     font-family: 'Playfair Display', sans-serif;
     margin: 0 0 2rem 0;
     font-size: 3rem;
 }
-a{
-    text-decoration: none;
-    color: #fff;
-}
-body{
-    display: block;
-}
-/*nav*/
-.nombre-sitio{
-    margin-left: 1rem;
-    color: #dedfe3;
-    text-align: center;
-    cursor: default;
-}
-.nombre-sitio span{
-    color: #F5EA07;
-    
-} 
-.nav-principal{
-    padding: 2rem 1rem;
-
-}
-.nav-principal a{
-    text-decoration: none;
-    position: relative;
-    color: #dedfe3;
-    margin: 0 50px 0 100px;
-    transition: .8s ;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.nav-principal a:hover {
-    margin-right: 1rem;
-    padding: 10px 5px;
-    border-bottom: 25px;
-    color: red;
-}
-.nav-principal a::after{
-    content: "";
-    position: absolute;
-    background-color: #f5f235;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s ;
-}
-.nav-principal a:hover::after{
-    width: 100%;
-    border-radius: 10px;
-}
-#menu {
-    position: absolute;
-    padding: 1rem 0 0 2rem;
-    visibility: hidden;
-}
-
-input#menu {
-    visibility: hidden;
-}
-
-@media screen and (max-width: 1000px) {
-    #menu {
-        visibility: visible;
-        position: relative;
-    }
-    header {
-        flex-direction: row-reverse;
-        border: none;
-    }
-    .title {
-        visibility: hidden;
-    }
-    .contenedor-navegacion {
-        padding-top: 1rem;
-        border-top: none;
-    }
-    .slider h1{
-        padding: 0;
-    }
-    .nav-principal {
-        background-color:#0F1111;
-        width: 100%;
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        right: 100%;
-        transition: all 300ms linear;
-        z-index: 2;
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .nav-principal a {
-        color: #fff;
-        border-bottom: 1px solid #fff;
-        
-    }
-    input#exit:checked ul{
-        left: 100%;
-    }
-    input#menu:checked~ul {
-        right: 0;
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-}
-/*slider*/
-.box{
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    
-}
-.slider{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-size: cover;
-    color: #fff;
-    font-family:sans-serif ;
-    background-position-x: center;
-}
-.slider h1{
-    display: flex;
-    width: 300px;
-    text-align: left;
-    padding-top: 30rem;
-    padding-left: 10%;
-    font-size: 40px;
-}
-@media screen and (max-width: 768px) {
-    .slider h1{
-        visibility:collapse;
-    }
-    button {
-        visibility:collapse;
-    }
-}
-.slider p{
-    display: flex;
-    padding-left: 10%;
-    max-width:500px;
-    text-align: left;
-    font-size: 18px;
-}
-.slider button{
-    display: flex;
-    margin-top: 1rem;
-    margin-left: 10%;
-}
-.img1{
-    background-image:url(../img/batman.jpg);
-    display: none;
-    background-position-y: 40%;
-}
-.img2{
-    background-image: url(/img/endgame.jpg);
-    display: none;
-    background-position-y: 15%;
-}
-.img3{
-    background-image: url(/img/infinity.jpg);
-    display: none;
-    background-position-y: 15%;
-}
-.img4{
-    background-image: url(/img/lina.jpg);
-    display: none;
-    background-position-y: 40%;
-}
-.img5{
-    background-image: url(/img/sonic.jpg);
-    display: none;
-    background-position-y: 40%;
-}
-.img6{
-    background-image: url(/img/uncharted.jpg);
-    display: none;
-    background-position-y: 20%;
-}
-button{
-
-    background-color: #f5f235;
-    padding: 5px 50px;
-    border: initial;
-    cursor: pointer;
-    border-radius: 5px;
-}
-button a{
-    color: #0F1111;
-}
-.boton{
-    position: absolute;
-    top: 40%;
-    font-size: 40pt;
-    color: #e1e1e1;
-    font-weight: bolder;
-    background-color: rgba(234, 240, 230, 0.733);
-    padding: 0px 10px;
-    border-radius: 50%;
-}
-.boton:hover{
-    background-color: rgba(189, 193, 186, 0.733);
-    transition: .5s;
-    color: #fff;
-}
-.derecha{
-    right: 1rem;
-}
-.izquierda{
-    left: 1rem;
-}
-/*pagina*/
-.pagina{
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
-    right: 0px;
-    text-align: center;
-}
-.pagina li{
+ul{
     list-style: none;
     width: 25px;
     height: 25px;
@@ -331,124 +92,199 @@ ul {
     min-height: 400px;
     min-width: 300px;
 }
-.vacio {
-    padding: 10px;
-    background-color: crimson;
+.titulo {
     text-align: center;
-    border-radius: 10px;
-    color: white;
+    margin-top: 5rem;
 }
-.contenido-hero {
-    margin-top: 80px;
-    color: white;
+
+
+/*nav start*/
+
+/*nav*/
+.nombre-sitio {
+    margin-left: 1rem;
+    color: #dedfe3;
+    text-align: center;
+    cursor: default;
 }
-.contenido-hero form {
+
+.nombre-sitio span {
+    color: #F5EA07;
+
+}
+
+.nav-principal {
+    padding: 2rem 1rem;
+
+}
+
+.nav-principal a {
+    text-decoration: none;
     position: relative;
-    margin-bottom: 0;
+    color: #dedfe3;
+    margin: 0 50px 0 100px;
+    transition: .8s;
+    text-transform: uppercase;
+    font-weight: 600;
 }
-.contenido-hero form #buscador {
-    height: 50px;
-    margin-bottom: 0;
+
+.nav-principal a:hover {
+    margin-right: 1rem;
+    padding: 10px 5px;
+    border-bottom: 25px;
+    color: red;
 }
-.contenido-hero form .submit-buscador {
+
+.nav-principal a::after {
+    content: "";
     position: absolute;
-    right:0;
-    top:0;
+    background-color: #f5f235;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.nav-principal a:hover::after {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#menu {
+    position: absolute;
+    padding: 1rem 0 0 2rem;
+    visibility: hidden;
+}
+
+input#menu {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    #menu {
+        visibility: visible;
+        position: relative;
+    }
+
+    header {
+        flex-direction: row-reverse;
+        border: none;
+    }
+
+    .title {
+        visibility: hidden;
+    }
+
+    .contenedor-navegacion {
+        padding-top: 1rem;
+        border-top: none;
+    }
+
+    .slider h1 {
+        padding: 0;
+    }
+
+    .nav-principal {
+        background-color: #0F1111;
+        width: 100%;
+        list-style: none;
+        height: 100vh;
+        position: absolute;
+        right: 100%;
+        transition: all 300ms linear;
+        z-index: 2;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav-principal a {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+
+    }
+
+    input#exit:checked ul {
+        left: 100%;
+    }
+
+    input#menu:checked~ul {
+        right: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* nav end*/
+
+.cuerpo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.img img {
+    width: 100%;
+    transition: all 500ms ease-out;
+}
+
+.texto {
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 100%;
-    padding: 0;
-    display: block;
-    text-indent: -9999px;
-    width: 50px;
-    background-image: url(../img/lupa.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    border:none;
-}
-
-
-.barra {
-    padding: 20px 0;
-    background: #741d51; /* Old browsers */
-    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
-}
-
-.barra p {
-    margin:0;
-    color: white;
-}
-.icono {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 60px;
-    background-size: 30px;
-    margin-bottom: 40px;
+    background: rgba(66, 70, 71, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
     text-align: center;
+    color: #e1e1e1;
+    padding-top: 10rem;
 }
-@media (min-width: 750px) {
-    .icono {
-        margin-bottom:0;
+
+.texto p {
+    padding-bottom: 2rem;
+}
+
+.img:hover>.texto {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width:768px) {
+    .cuerpo {
+        flex-direction: column;
+        height: auto;
+        position: relative;
     }
 }
-.icono1 {
-    background-image: url(../img/icono1.png);
-}
-.icono2 {
-    background-image: url(../img/icono2.png);
-}
-.icono3 {
-    background-image: url(../img/icono3.png);
+
+/*cuerpo 2.0*/
+.img1 {
+    background-image: url(../img/batman.jpg);
+    background-size: cover;
+    display: none;
 }
 
-#lista-cursos .row {
-    margin-bottom:20px;
-}
-.agregar-carrito {
-    margin:10px 0;
-}
-
-.card {
-    text-align: center;
-    border: 1px solid #e1e1e1;
-    background: white;
-}
-@media (min-width: 550px) {
-    .card {
-        text-align: left;
-    }
-}
-.info-card  {
-    padding: 10px 20px;
-}
-
-.info-card p, 
-.card h4 {
-    margin-bottom: 5px;
-}
-.info-card .precio {
-    text-decoration: line-through;
-    font-size: 18px;
-    margin-top: 10px;
-}
-.info-card .precio span {
-    font-weight: 700;
-    font-size: 22px;
-}
-
-
-.footer {
-    margin-top: 40px;
-    border-top:1px solid #aaa;;
-    padding-top: 40px;   
-}
-.footer .menu a{
-display: block;
-margin-bottom: 10px;
-text-decoration: none;
-}
-
+/* redes */
 /*redes*/
 .redes {
     margin: 3rem;
@@ -491,9 +327,11 @@ footer {
     padding: 2rem;
     text-align: center;
 }
+
 footer h3 {
     color: rgb(99, 90, 90);
 }
+
 footer span {
     color: #929067;
 }
