@@ -91,6 +91,7 @@ input#menu {
     }
     header {
         flex-direction: row-reverse;
+        border: none;
     }
     .title {
         visibility: hidden;
@@ -103,18 +104,18 @@ input#menu {
         padding: 0;
     }
     .nav-principal {
-        background-color: #645606fb;
+        background-color:#0F1111;
         width: 100%;
         list-style: none;
-        height: 80%;
+        height: 100vh;
         position: absolute;
-        top: 10rem;
         right: 100%;
         transition: all 300ms linear;
         z-index: 2;
         display: flex;
         text-align: center;
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .nav-principal a {
@@ -122,7 +123,9 @@ input#menu {
         border-bottom: 1px solid #fff;
         
     }
-
+    input#exit:checked ul{
+        left: 100%;
+    }
     input#menu:checked~ul {
         right: 0;
     }
@@ -132,10 +135,6 @@ input#menu {
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 2.5rem;
-    }
-
-    .nav-principal {
-        top: 11rem;
     }
 }
 /*slider*/
@@ -156,11 +155,19 @@ input#menu {
 }
 .slider h1{
     display: flex;
-    width: 200px;
+    width: 300px;
     text-align: left;
     padding-top: 30rem;
     padding-left: 10%;
     font-size: 40px;
+}
+@media screen and (max-width: 768px) {
+    .slider h1{
+        visibility:collapse;
+    }
+    button {
+        visibility:collapse;
+    }
 }
 .slider p{
     display: flex;
@@ -212,6 +219,9 @@ button{
     cursor: pointer;
     border-radius: 5px;
 }
+button a{
+    color: #0F1111;
+}
 .boton{
     position: absolute;
     top: 40%;
@@ -228,11 +238,10 @@ button{
     color: #fff;
 }
 .derecha{
-    
-    right: 5rem;
+    right: 1rem;
 }
 .izquierda{
-    left: 5rem;
+    left: 1rem;
 }
 /*pagina*/
 .pagina{
@@ -304,21 +313,27 @@ cuerpo
 }
 @media (max-width:768px){
     .cuerpo{
-        display: block;
-        width: 100%;
+        flex-direction: column;
+        height: auto;
         position: relative;
     }
 }
 
-/*redes*/
-/*redes*/
-.redes{
-    min-width: 700px;
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(50deg,lavender,lightyellow);
+/*cuerpo 2.0*/
+.img1 {
+    background-image: url(../img/batman.jpg);
+    background-size: cover;
+    display: none;
 }
-.redes a{
+
+/*redes*/
+.redes {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redes a {
     text-decoration: none;
     font-size: 28px;
     width: 60px;
@@ -331,24 +346,31 @@ cuerpo
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transition: all .4s ease-in-out;
 }
-.redes a:hover{
+
+.redes a:hover {
     transform: scale(1.2);
 }
-.fa-facebook:hover{
+
+.fa-facebook:hover {
     background: rgba(0, 47, 255, 0.473);
 }
-.fa-twitter:hover{
+
+.fa-twitter:hover {
     background: rgb(0, 119, 255);
 }
-.fa-instagram:hover{
-    background: linear-gradient(50deg,darkorange,crimson);
+
+.fa-instagram:hover {
+    background: linear-gradient(50deg, darkorange, crimson);
 }
-footer{
-    background: linear-gradient(50deg,lavender,lightyellow);
+
+footer {
     height: 100%;
-    padding-top:2rem;
-    color: #3146529a;
+    padding: 2rem;
     text-align: center;
 }
-
-
+footer h3 {
+    color: rgb(99, 90, 90);
+}
+footer span {
+    color: #929067;
+}
