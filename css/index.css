@@ -13,6 +13,9 @@ a{
     text-decoration: none;
     color: #000;
 }
+body{
+    display: block;
+}
 /*nav*/
 .nombre-sitio{
     margin-top: 5rem;
@@ -127,6 +130,8 @@ input#menu {
     background-size: cover;
     color: #fff;
     font-family:sans-serif ;
+    height:50px;
+    width:100%;
 }
 .slider h1{
     font-size: 40px;
@@ -135,11 +140,9 @@ input#menu {
     font-size: 18px;
 }
 .img1{
-    background-image:url(../img/batman.jpg);
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image:url(../img/batman.jpg) ;
+    background-size: cover;
+    display: none;
 }
 .img2{
     background-image: url(/img/endgame.jpg);
@@ -167,6 +170,7 @@ button{
     padding: 5px 50px;
     border: initial;
     cursor: pointer;
+    border-radius: 5px;
 }
 .boton{
     position: absolute;
@@ -211,3 +215,117 @@ button{
     background-color:#645606fb;
     transition: .5s;
 }
+/*
+cuerpo
+*/
+.titulo{
+    text-align: center;
+    margin-top: 5rem;
+}
+.cuerpo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.img img{
+    width: 100%;
+    transition: all 500ms ease-out;
+}
+.texto{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 70, 71, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    color: #e1e1e1;
+    padding-top: 10rem;
+}
+.texto p{
+    padding-bottom: 2rem;
+}
+.img:hover > .texto{
+    opacity: 1;
+    visibility: visible;
+}
+@media (max-width:768px){
+    .cuerpo{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+}
+
+/*cuerpo 2.0*/
+.displa{
+    text-align: center;
+    display: flex;
+}
+.cine{
+    width: 20rem;
+    height: 35rem;
+    margin-left: 10rem;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.bienvenido{
+    width: 35rem;
+    height: 15rem;
+    padding-top: 5rem;
+    margin-top: 100px;
+    margin-left: 20rem;
+    -webkit-box-shadow: 22px 23px 0 -12px #6c7405;
+}
+.bienvenido h2{
+    font-size: 3.5rem;
+    text-align: left;
+}
+.bienvenido h2 span{
+    color: #f5f235;
+}
+@media (max-width:768px){
+    .displa{
+        margin-top: 60rem;
+        display: block;
+        width: auto;
+        position: relative;
+    }
+    .cine{
+        margin-left: 0;
+        box-shadow: none;
+        width: auto;
+        height: auto;
+    }
+    .bienvenido{
+        margin-left: 0;
+        margin-top: 0;
+        -webkit-box-shadow:none;
+        width: auto;
+        height: auto;
+    }
+    .cine img{
+        width: 250px;
+        height: 250px;
+        
+    }
+}
+@media (min-width:1280px){
+    .displa{
+        margin-left:-10rem;
+    }
+}
+
+
