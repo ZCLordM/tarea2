@@ -1,0 +1,213 @@
+*{
+    font-family: 'Raleway',sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+/*globales*/
+h1{
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0 0 2rem 0;
+    font-size: 3rem;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+/*nav*/
+.nombre-sitio{
+    margin-top: 5rem;
+    text-align: center;
+    cursor: default;
+}
+.nombre-sitio span{
+    color: #F5EA07;
+    
+}
+.contenedor-navegacion{
+    border-bottom: .1rem solid #e1e1e1;
+}
+.nav-principal{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+.nav-principal a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.527);
+    position: relative;
+    margin: 0 50px 0 100px;
+    transition: .8s ;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-principal a:hover{
+    padding: 10px 5px;
+    border-bottom: 25px;
+    color: red;
+}
+.nav-principal a::after{
+    content: "";
+    position: absolute;
+    background-color: #f5f235;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ;
+}
+.nav-principal a:hover::after{
+    width: 100%;
+    border-radius: 10px;
+}
+#menu {
+    position: absolute;
+    padding: 1rem 0 0 2rem;
+    visibility: hidden;
+}
+
+input#menu {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    #menu {
+        visibility: visible;
+        position: relative;
+    }
+    .contenedor-navegacion {
+        padding-top: 1rem;
+        border-top: none;
+    }
+
+    .nav-principal {
+        background-color: #645606fb;
+        width: 100%;
+        list-style: none;
+        height: 80%;
+        position: absolute;
+        top: 10rem;
+        right: 100%;
+        transition: all 300ms linear;
+        z-index: 2;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .nav-principal a {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        
+    }
+
+    input#menu:checked~ul {
+        right: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-principal {
+        top: 11rem;
+    }
+}
+/*slider*/
+.box{
+    position: relative;
+}
+.slider{
+    text-align: center;
+    padding: 150px 50px;
+    background-size: cover;
+    color: #fff;
+    font-family:sans-serif ;
+}
+.slider h1{
+    font-size: 40px;
+}
+.slider p{
+    font-size: 18px;
+}
+.img1{
+    background-image:url(../img/batman.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.img2{
+    background-image: url(/img/endgame.jpg);
+    display: none;
+}
+.img3{
+    background-image: url(/img/infinity.jpg);
+    display: none;
+}
+.img4{
+    background-image: url(/img/lina.jpg);
+    display: none;
+}
+.img5{
+    background-image: url(/img/sonic.jpg);
+    display: none;
+}
+.img6{
+    background-image: url(/img/uncharted.jpg);
+    display: none;
+}
+button{
+
+    background-color: #f5f235;
+    padding: 5px 50px;
+    border: initial;
+    cursor: pointer;
+}
+.boton{
+    position: absolute;
+    top: 40%;
+    font-size: 40pt;
+    color: #e1e1e1;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0px 10px;
+    border-radius: 50%;
+}
+.boton:hover{
+    background-color: rgba(234, 240, 230, 0.733);
+    transition: .5s;
+    color: black;
+}
+.derecha{
+    right: 10px;
+}
+.izquierda{
+    left: 10px;
+}
+/*pagina*/
+.pagina{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+.pagina li{
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.pagina li:hover{
+    background-color:#645606fb;
+    transition: .5s;
+}
