@@ -9,8 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <header>
-    <h1 class="nombre-sitio">Cine<span>manía</span> </h1>
-</header>
+    <h1 class="nombre-sitio">Cine<span>Manía</span> </h1>
     <div class="contenedor-navegacion">
         <input type="checkbox" id="menu" class="menu-input">
         <label for="menu" id="menu">
@@ -22,46 +21,63 @@
             <a href="alquiler.html">Películas</a>
         </ul>
     </div>
+</header>
+    
     <div class="box">
         <div class="slider img1">
             <h1>UNCHARTED</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
-                 aperiam nihil quos, minus deleniti?
-                </p>
-            <button ><a href="/alquiler.html"> Peliculas</a></button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus
+                autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
+                aperiam nihil quos, minus deleniti?
+            </p>
+            <button><a href="/alquiler.html"> Peliculas</a></button>
         </div>
         <div class="slider img2">
             <h1>UNCHARTED</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
-                 aperiam nihil quos, minus deleniti?
-                </p>
-                <button ><a href="/alquiler.html"> Peliculas</a></button>        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus
+                autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
+                aperiam nihil quos, minus deleniti?
+            </p>
+            <button><a href="/alquiler.html"> Peliculas</a></button>
+        </div>
         <div class="slider img3">
             <h1>UNCHARTED</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
-                 aperiam nihil quos, minus deleniti?
-                </p>
-                <button ><a href="/alquiler.html"> Peliculas</a></button>        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus
+                autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
+                aperiam nihil quos, minus deleniti?
+            </p>
+            <button><a href="/alquiler.html"> Peliculas</a></button>
+        </div>
         <div class="slider img4">
             <h1>UNCHARTED</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
-                 aperiam nihil quos, minus deleniti?
-                </p>
-                <button ><a href="/alquiler.html"> Peliculas</a></button>        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus
+                autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
+                aperiam nihil quos, minus deleniti?
+            </p>
+            <button><a href="/alquiler.html"> Peliculas</a></button>
+        </div>
         <div class="slider img5">
             <h1>UNCHARTED</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
-                 aperiam nihil quos, minus deleniti?
-                </p>
-                <button ><a href="/alquiler.html"> Peliculas</a></button>        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus
+                autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
+                aperiam nihil quos, minus deleniti?
+            </p>
+            <button><a href="/alquiler.html"> Peliculas</a></button>
+        </div>
         <div class="slider img6">
             <h1>UNCHARTED</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
-                 aperiam nihil quos, minus deleniti?
-                </p>
-                <button ><a href="/alquiler.html"> Peliculas</a></button>        </div>
-        <div class="boton derecha">&gt;</div>
-        <div class="boton izquierda">&lt;</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et cupiditate quod, necessitatibus
+                autem exercitationem aspernatur impedit quis quia quo facere excepturi quibusdam quam facilis
+                aperiam nihil quos, minus deleniti?
+            </p>
+            <button><a href="/alquiler.html"> Peliculas</a></button>
+        </div>
+        <div class="boton derecha">
+            <img src="/icons/mover-al-siguiente.png" width="35px">
+        </div>
+        <div class="boton izquierda">
+            <img src="/icons/anterior.png" alt="" width="35px">
+        </div>
         <ul class="pagina">
             <li>1</li>
             <li>2</li>
@@ -72,7 +88,7 @@
         </ul>
     </div>
     <script>
-        var indice = 1;
+        var indice = 0;
         $(".pagina li").eq(indice).css("background-color","#645606fb")
         $(".pagina li").click(function(){
             indice=$(this).index();
